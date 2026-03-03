@@ -15,7 +15,7 @@ resource "aws_s3_bucket_versioning" "versioning" {
 
 }
 
-resource "aws_s3_bucket_public_access_block" "example" {
+resource "aws_s3_bucket_public_access_block" "BPA" {
   bucket = aws_s3_bucket.this.id
 
   block_public_acls       = true
@@ -23,3 +23,4 @@ resource "aws_s3_bucket_public_access_block" "example" {
   ignore_public_acls      = true
   restrict_public_buckets = true
 }
+
